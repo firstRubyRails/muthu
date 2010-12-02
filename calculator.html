@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />   
     <link rel="stylesheet" href="css/blueprint/liquid.css" type="text/css" />
     <link rel="stylesheet" href="css/blueprint/calc.css" type="text/css">
-    <script type="script/server" src="css/blueprint/calc.js"></script>
+    <script type="text/javascript" src="css/blueprint/calc.js"></script>
   </head>
   <body>
     <div class="container">
@@ -15,8 +15,8 @@
       <div class="prepend-7 calculator">
 	<div>
 	<label>Operand 1 : </label>
-	<input type="text" value="0" id="operand1">
-	<span id="operand1-help" class=""></span>	  
+	<input type="text" value="0" id="operand1"  onblur="validateOperand(this.id)">
+	<span id="operand1-helptext" class=""></span>	  
 	</div>
 	<div>
 	<label>Operator : </label>
@@ -25,8 +25,8 @@
 	</div>
 	<div>
 	<label>Operand 2 : </label>
-	<input type="text" value="0" id="operand2">
-	<span id="operand2-help"></span>
+	<input type="text" value="0" id="operand2" onblur="validateOperand(this.id)">
+	<span id="operand2-helptext"></span>
 	</div>
 	<div>
 	<label>Result : </label>

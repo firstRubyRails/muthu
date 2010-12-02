@@ -1,7 +1,0 @@
-function Input(inputField) {
-    this.inputField = inputField;   
-}
-
-function Operand(inputField, helpField) {
-    
-}

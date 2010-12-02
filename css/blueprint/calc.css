@@ -21,3 +21,8 @@
 h1,label {
     color: #2D66CF;
 }
+
+span {
+    color: #2D66CF;
+    margin-left: 20px;
+}
