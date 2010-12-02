@@ -1,0 +1,1317 @@
+<html><head>
+    <title>Calendar Cruncher</title>
+    <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/start/jquery-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <link href="/stylesheets/cache/all.css?1291116665" media="screen" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/blueprint.css?1291116665" media="screen" rel="stylesheet" type="text/css">
+
+    <!--[if IE]><link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <!--[if IE 7]>
+    <style type="text/css">
+    .content-div {
+       padding-top:2%;
+    }
+    </style>
+    <![endif]-->
+
+  </head>
+  <body>
+    <script src="/javascripts/jquery/jquery.tools.min.js?1291116665" type="text/javascript"></script>
+    <script src="/javascripts/jquery/jquery.validate.min.js?1291116665" type="text/javascript"></script>
+    <script src="/javascripts/jquery.js?1291116665" type="text/javascript"></script>
+    <script src="/javascripts/cache/all.js?1291116665" type="text/javascript"></script>
+
+    <script type="text/javascript">$(document).ready(function() { $('.feedback_link').feedback({tabPosition: 'left'}); });</script>
+
+
+    <div class="container" id="calendar_page">
+      <div id="headingBar" class="span-24 last clear">
+        <div id="cc" class="column span-12 medium-text bold-text">
+           <a href="https://staging.calendarcruncher.com/home" style="display:block"> <img src="/images/logo-beta.png" alt="CalendarCruncher"> </a>
+        </div>
+        <div class="padding-top-2 span-11 last right-align">
+          <div class="span-24 right-align right-text">
+            <a id="account_details_link" href="/account_details">My Info</a>&nbsp;&nbsp;&nbsp;
+            <a id="preferences-link" href="/preferences">My Preferences</a>&nbsp;&nbsp;&nbsp;
+            <a id="logout" href="/logout">Log Out</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-div">
+        <div id="flash_message" class="rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+  <p class="rounded-corner" data-corner="8px" style="border-top-left-radius: 8px 8px; border-top-right-radius: 8px 8px; border-bottom-left-radius: 8px 8px; border-bottom-right-radius: 8px 8px; ">
+    <a class="close" href="#">Close</a>
+    
+    
+    
+  </p>
+</div>
+
+        
+  <div id="tooltip" style="position: absolute; top: 116px; left: 45.5px; display: none; "><div><span class="tooltip-title">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></div><span class="tooltip-help">Drag to date and time</span></div>
+
+  <div class="my-templates column clear">
+    <div class="span-24 heading center-text">
+     
+      <a id="my_quickevents" href="/manage_templates">My QuickEvents </a>
+      
+    </div>
+    <div id="templates" class="span-23 prepend-2" style="overflow: hidden;">
+      <ul class="items">
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" src="https://s3.amazonaws.com/cc-demo-template-icons/default.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=vM36bt4x3oVxUPe0Jx1lx28ylLw%3D" onmousedown="setTemplate(this)" alt="50" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Call" src="https://s3.amazonaws.com/cc-demo-template-icons/call.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=H8MW%2B3dCPXMQ%2BEglxjDVpSDYMIU%3D" onmousedown="setTemplate(this)" alt="30" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Class" src="https://s3.amazonaws.com/cc-demo-template-icons/class.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=A1HgUGFdbp8s4Ymtol7S%2FCMY1AI%3D" onmousedown="setTemplate(this)" alt="31" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Date" src="https://s3.amazonaws.com/cc-demo-template-icons/date.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=FJlxUGayvSCLbtQPaNANv2cZRyk%3D" onmousedown="setTemplate(this)" alt="32" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Dentist" src="https://s3.amazonaws.com/cc-demo-template-icons/dentist.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=fpTTmq4o5XU8OdVmroJcO8olmAw%3D" onmousedown="setTemplate(this)" alt="33" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Doctor" src="https://s3.amazonaws.com/cc-demo-template-icons/doctor.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=YwRlYYWVf7l3a%2FPVpz2NXxGs2fI%3D" onmousedown="setTemplate(this)" alt="34" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Errand" src="https://s3.amazonaws.com/cc-demo-template-icons/errand.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=ajX7tIG0XjZ%2FtyG6ZbuGSaCKrz4%3D" onmousedown="setTemplate(this)" alt="35" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Game" src="https://s3.amazonaws.com/cc-demo-template-icons/game.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=KkP9Nioml%2BBnvE6Ad6wjTnOzMsI%3D" onmousedown="setTemplate(this)" alt="36" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Groceries" src="https://s3.amazonaws.com/cc-demo-template-icons/groceries.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=nK3rhuZAmLaIgffuri3fe11XUKM%3D" onmousedown="setTemplate(this)" alt="37" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Homework" src="https://s3.amazonaws.com/cc-demo-template-icons/homework.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=FSkTuPkA3w3fJ2WNPqOqMaAgTWA%3D" onmousedown="setTemplate(this)" alt="38" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Lunch" src="https://s3.amazonaws.com/cc-demo-template-icons/lunch.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=9Td%2FXwquM2EiRBh9HeYBO2lLfnU%3D" onmousedown="setTemplate(this)" alt="39" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Meeting" src="https://s3.amazonaws.com/cc-demo-template-icons/meeting.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=tFbMw%2Bc1afWqrjcJiNmW20CJtPs%3D" onmousedown="setTemplate(this)" alt="40" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Movie" src="https://s3.amazonaws.com/cc-demo-template-icons/movie.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=jaqNgV4qBjqn4%2FxLtVPXOsF1n8E%3D" onmousedown="setTemplate(this)" alt="41" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Practice" src="https://s3.amazonaws.com/cc-demo-template-icons/practice.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=Tb6VNhekjhh0E2ke3JcoSOi3UQw%3D" onmousedown="setTemplate(this)" alt="42" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Travel" src="https://s3.amazonaws.com/cc-demo-template-icons/travel.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=NZKL%2FIu61SzfF6459MzJk0dUCro%3D" onmousedown="setTemplate(this)" alt="43" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Workout" src="https://s3.amazonaws.com/cc-demo-template-icons/workout.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=09U%2F04WhR5rTMGX1Fpm3c5qMWlI%3D" onmousedown="setTemplate(this)" alt="44" class="ui-draggable">
+            </div>
+          </li>
+        
+          <li class="left-align">
+            <div class="template-item rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+              <img id="Meeting" src="https://s3.amazonaws.com/cc-demo-template-icons/default.png?AWSAccessKeyId=AKIAIJ5QDU634W46T4PA&amp;Expires=1291128502&amp;Signature=vM36bt4x3oVxUPe0Jx1lx28ylLw%3D" onmousedown="setTemplate(this)" alt="46" class="ui-draggable">
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+    <div id="template_list_counter"></div>
+    
+      <div class="padding-top-1 span-23 prepend-2 last"><a id="manage_template" href="/manage_templates">Manage</a></div>
+      <div class="span-23 prepend-2 last"><a href="/event_templates/new">Add</a></div>
+    
+  </div>
+
+        
+  <div class="my-calendars column last" style="float:right;">
+    <div class="span-23">
+      <div id="mini-calendar" class="rounded-corner span-24 last fc" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><table class="fc-header"><tbody><tr><td class="fc-header-left"><table><tbody><tr><td><div class="fc-button-prev fc-state-default fc-corner-left fc-corner-right"><a><span>&nbsp;<span class="rounded-corner"><img src="/images/prev.gif" onclick="removeActiveDayselection()" alt="prev"></span>&nbsp;</span></a></div></td></tr></tbody></table></td><td class="fc-header-center"><table><tbody><tr><td><h2 class="fc-header-title">November 2010</h2></td></tr></tbody></table></td><td class="fc-header-right"><table><tbody><tr><td><div class="fc-button-next fc-state-default fc-corner-left fc-corner-right"><a><span>&nbsp;<span class="rounded-corner"><img src="/images/next.gif" onclick="removeActiveDayselection()" alt="next"></span>&nbsp;</span></a></div></td></tr></tbody></table></td></tr></tbody></table><div class="fc-content fc-widget-content" style="position: relative; min-height: 1px; "><div class="fc-view fc-view-month fc-grid" style="position: relative; " unselectable="on"><table><tbody><tr class="fc-week0"><td class="fc-sun fc-state-default fc-day0 fc-leftmost fc-other-month fc-not-today" style="height: 25px; "><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><td class="fc-mon fc-state-default fc-day1 fc-not-today"><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-tue fc-state-default fc-day2 fc-not-today"><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-wed fc-state-default fc-day3 fc-not-today"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-thu fc-state-default fc-day4 fc-not-today"><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-fri fc-state-default fc-day5 fc-not-today"><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-sat fc-state-default fc-day6 fc-not-today"><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td></tr><tr class="fc-week1"><td class="fc-sun fc-state-default fc-day7 fc-leftmost fc-not-today" style="height: 25px; "><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><td class="fc-mon fc-state-default fc-day8 fc-not-today"><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-tue fc-state-default fc-day9 fc-not-today"><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-wed fc-state-default fc-day10 fc-not-today"><div class="fc-day-number">10</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-thu fc-state-default fc-day11 fc-not-today"><div class="fc-day-number">11</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-fri fc-state-default fc-day12 fc-not-today"><div class="fc-day-number">12</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-sat fc-state-default fc-day13 fc-not-today"><div class="fc-day-number">13</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td></tr><tr class="fc-week2"><td class="fc-sun fc-state-default fc-day14 fc-leftmost fc-not-today" style="height: 25px; "><div class="fc-day-number">14</div><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><td class="fc-mon fc-state-default fc-day15 fc-not-today"><div class="fc-day-number">15</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-tue fc-state-default fc-day16 fc-not-today"><div class="fc-day-number">16</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-wed fc-state-default fc-day17 fc-not-today"><div class="fc-day-number">17</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-thu fc-state-default fc-day18 fc-not-today"><div class="fc-day-number">18</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-fri fc-state-default fc-day19 fc-not-today"><div class="fc-day-number">19</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-sat fc-state-default fc-day20 fc-not-today"><div class="fc-day-number">20</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td></tr><tr class="fc-week3"><td class="fc-sun fc-state-default fc-day21 fc-leftmost fc-not-today" style="height: 25px; "><div class="fc-day-number">21</div><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><td class="fc-mon fc-state-default fc-day22 fc-not-today"><div class="fc-day-number">22</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-tue fc-state-default fc-day23 fc-not-today"><div class="fc-day-number">23</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-wed fc-state-default fc-day24 fc-not-today"><div class="fc-day-number">24</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-thu fc-state-default fc-day25 fc-not-today"><div class="fc-day-number">25</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-fri fc-state-default fc-day26 fc-not-today"><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-sat fc-state-default fc-day27 fc-not-today"><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td></tr><tr class="fc-week4"><td class="fc-sun fc-state-default fc-day28 fc-leftmost fc-not-today" style="height: 25px; "><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><td class="fc-mon fc-state-default fc-day29 fc-not-today"><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-tue fc-state-default fc-day30 fc-today fc-state-highlight"><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-wed fc-state-default fc-day31 fc-other-month fc-not-today"><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-thu fc-state-default fc-day32 fc-other-month fc-not-today"><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-fri fc-state-default fc-day33 fc-other-month fc-not-today"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td><td class="fc-sat fc-state-default fc-day34 fc-other-month fc-not-today"><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position:relative">&nbsp;</div></div></td></tr></tbody></table><div style="position:absolute;z-index:8;top:0;left:0"></div></div></div></div>
+      <!--      <img src="/images/datepicker.gif" alt="Date Picker"/>-->
+    </div>
+    <div id="calendars_list" class="padding-top-1 span-23">
+      <div class="span-24 heading">
+         
+          <a id="my_calendars" href="/manage_calendar?tab=2">My Calendars </a>
+           
+      </div>
+
+      
+        
+        
+        <div class="span-24 my-calendar rounded-corner red-calendar" title="anotherTest" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+          <div class="column">
+            <input type="checkbox" onclick="toggleCalendar(140,'red')" name="anotherTest" id="140">
+          </div>
+          <div class="column span-18 last">
+            <label class="calendar-name" for="140">anotherTest</label>
+          </div>
+        </div>
+      
+        
+        
+        <div class="span-24 my-calendar rounded-corner yellow-calendar" title="Test" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+          <div class="column">
+            <input type="checkbox" onclick="toggleCalendar(259,'yellow')" name="Test" id="259">
+          </div>
+          <div class="column span-18 last">
+            <label class="calendar-name" for="259">Test</label>
+          </div>
+        </div>
+      
+      
+    </div>
+     <div id="calendar_list_counter"></div>
+    
+      <div class="padding-top-1 span-24 last"><a id="manage_calendar" href="/manage_calendar?tab=2">Manage</a></div>
+      <div class="span-24 last"><a href="/calendar/new">Add</a></div>
+    
+  </div>
+
+        <div class="calendar-details column rounded-corner" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+          
+  <div class="calendar-view-header span-24">
+    <div class="column calendar-header-padding"><span>TUESDAY, NOVEMBER 30, 2010</span></div>
+    <div class="right-div right-align">
+      <div class="column calendar-header-padding "><a onclick="fetchSyncCalendarUpdates()" class="sync-link">Refresh</a></div>
+      
+        <div class="column button-color rounded-corner" id="add_event" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Create Event</div>
+      
+      <div class="immediate_view column button-color rounded-corner preference active" data-corner="left 4px" style="border-top-left-radius: 4px 4px; border-bottom-left-radius: 4px 4px; ">
+        <a class="rounded-corner" name="Immediate" onclick="setView('immediateAgendaView')" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Daily</a>
+      </div>
+      <div class="short_term_view column button-color preference">
+        <a class="rounded-corner" name="ShortTerm" onclick="setView('shortTerm')" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Weekly</a>
+      </div>
+      <div class="long_term_view column button-color rounded-corner" data-corner="right 4px" style="border-top-right-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+        <a class="rounded-corner" name="LongTerm" onclick="setView('longTerm')" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Monthly</a>
+      </div>
+      <div class="column">
+        <div class="column date-div"> <a class="prev-link" onclick="userScroll=false;changeDisplayedDate('prev')">
+            <img src="/images/left_arrow_black.gif" alt="prev"></a></div>
+        <div class="column date-div date-status center-text"><a onclick="userScroll=false;changeDisplayedDate('today')">
+            <label>Today</label></a></div>
+        <div class="date-div column"><a class="next-link" onclick="userScroll=false;changeDisplayedDate('next')">
+            <img src="/images/right_arrow_black.gif" alt="next"></a></div>
+      </div>
+    </div>
+  </div>
+
+          <div class="full-calendar span-24">
+            
+<input type="hidden" id="date_format" value="dd-M-yy"> <input type="hidden" id="time_format" value="(h:mm)tt{ - (h:mm)tt}"> <input type="hidden" id="offset">
+
+<style type="text/css">
+  body {
+    /*text-align:center;*/
+  }
+</style>
+<!-- We are checking whether the loading div is present in 2 places
+     1. While changing the view
+     2. While scrolling
+-->
+
+<div id="parent_calendar">
+  <div id="loading" class="span-24" style="display: none; "><span>Loading...</span></div>
+  <div id="calendar" class="immediate-view-calendar fc"><table class="fc-header"><tbody><tr><td class="fc-header-left"></td><td class="fc-header-center"><table><tbody><tr><td><h2 class="fc-header-title">TUESDAY, NOVEMBER 30, 2010</h2></td></tr></tbody></table></td><td class="fc-header-right"></td></tr></tbody></table><div class="fc-content fc-widget-content" style="position: relative; min-height: 1px; "><div class="fc-view fc-view-immediateAgendaView fc-agenda" style="position: relative; " unselectable="on"><div class="fc-agenda-head" style="position:relative;z-index:4"><table style="width:100%"><tbody><tr style="height: 40px; " class="fc-first"><th class="fc-leftmost fc-state-default" style="width: 58px; ">&nbsp;</th><th style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; width: 871px; " class="calendar-title fc-tue fc-state-default">TUESDAY, NOVEMBER 30, 2010</th><th class="fc-state-default">&nbsp;</th></tr><tr class="fc-all-day"><th class="fc-axis fc-leftmost fc-state-default">All Day</th><td colspan="1" class="fc-state-default"><div class="fc-day-content"><div style="position: relative; height: 0px; ">&nbsp;</div></div></td><th class="fc-state-default">&nbsp;</th></tr><tr class="fc-divider fc-last"><th colspan="3" class="fc-state-default fc-leftmost"><div></div></th></tr></tbody></table><div style="position:absolute;z-index:8;top:0;left:0"></div></div><div class="fc-agenda-body" style="position: relative; z-index: 2; overflow-x: auto; overflow-y: auto; width: 949px; "><div style="position:relative;overflow:hidden"><table style="width: 949px; "><tbody><tr class="fc-first" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">12:00am</th><td class="fc-slot0 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot1 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">1:00am</th><td class="fc-slot2 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot3 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">2:00am</th><td class="fc-slot4 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot5 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">3:00am</th><td class="fc-slot6 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot7 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">4:00am</th><td class="fc-slot8 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot9 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">5:00am</th><td class="fc-slot10 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot11 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">6:00am</th><td class="fc-slot12 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot13 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">7:00am</th><td class="fc-slot14 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor" style="display: none; "><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot15 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">8:00am</th><td class="fc-slot16 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot17 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">9:00am</th><td class="fc-slot18 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot19 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">10:00am</th><td class="fc-slot20 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot21 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">11:00am</th><td class="fc-slot22 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot23 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">12:00pm</th><td class="fc-slot24 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot25 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">1:00pm</th><td class="fc-slot26 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot27 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">2:00pm</th><td class="fc-slot28 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot29 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">3:00pm</th><td class="fc-slot30 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot31 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">4:00pm</th><td class="fc-slot32 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot33 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">5:00pm</th><td class="fc-slot34 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot35 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">6:00pm</th><td class="fc-slot36 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot37 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">7:00pm</th><td class="fc-slot38 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot39 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">8:00pm</th><td class="fc-slot40 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot41 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">9:00pm</th><td class="fc-slot42 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot43 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">10:00pm</th><td class="fc-slot44 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot45 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class=""><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">11:00pm</th><td class="fc-slot46 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr><tr class="fc-minor"><th class="fc-axis fc-leftmost fc-state-default" style="width: 50px; ">&nbsp;</th><td class="fc-slot47 fc-state-default"><div style="position:relative">&nbsp;</div></td></tr></tbody></table><div style="position:absolute;z-index:8;top:0;left:0"></div></div></div><div class="fc-agenda-bg" style="position: absolute; z-index: 1; left: 58px; width: 891px; top: 40px; height: 100%; "><table style="width:100%;height:100%"><tbody><tr class="fc-first"><td class="fc-tue fc-state-default fc-leftmost fc-state-highlight fc-today"><div class="fc-day-content"><div>&nbsp;</div></div></td></tr></tbody></table></div></div></div></div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+  var template = "null";
+  var curViewName = "immediateAgendaView";
+  var event_template_id = "null";
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'];
+  var timeVal;
+  var toTimeVal;
+  var editable;
+  var calendarList = new Object();
+  var eventDataSource;
+  var oldActiveDay;
+
+  
+    calendarList['140'] = "anotherTest"
+
+  
+    calendarList['259'] = "Test"
+
+  $(document).ready(function() {
+    $("#create-appt").hide();
+    show_weekends  = 'true'
+    week_starts_on = '0'
+    timeFormat    = '(h:mm)tt{ - (h:mm)tt}'
+    longTermEventTimeFormat = 'h:mmt'
+    newAxisFormat = '(h:mm)tt{ - (h:mm)tt}'
+    dateFormat    = 'dd-M-yy'
+    curViewName   = 'immediateAgendaView'
+    startTime   =  '8'
+    editable = true
+    if(show_weekends == "" || show_weekends == "true" )
+      show_weekends = true
+    else
+      show_weekends = false
+    $("#date_format").val(dateFormat);
+    $("#time_format").val(timeFormat);
+    $("p#success_flash_message").html("");
+    //for(j = 0;j < 1;j++){
+    //pos = (j!=1)?j:"";
+    $('#calendar').fullCalendar({
+      header: {
+        left: '',
+        center: 'title',
+        right: ''
+      },
+      defaultStartTime:startTime,
+      calendarId:'calendar',
+      buttonText: {
+        day: '&nbsp;Day&nbsp;',
+        week: '&nbsp;Week&nbsp;',
+        month: '&nbsp;Month&nbsp;',
+        today: '&nbsp;Today&nbsp;',
+        prev: '&nbsp;Previous&nbsp;',
+        next: '&nbsp;Next&nbsp;',
+        prevYear: '&nbsp<img src="/images/go-first.png" alt="prevYr-icon"/>&nbsp;',
+        nextYear: '&nbsp;<img src="/images/go-last.png" alt="nextYr-icon"/>&nbsp;'
+      },
+      editable:editable,
+      droppable: true,
+      disableResizing: true,
+      lazyFetching: false,
+      weekMode: 'liquid',
+      weekends:show_weekends,
+      firstDay: week_starts_on,
+      timeFormat: {
+        immediateAgendaView: timeFormat,
+        shortTerm: timeFormat,
+        longTerm: longTermEventTimeFormat
+      },
+      axisFormat:newAxisFormat,
+      loading: function( isLoading, view ){
+        if(isLoading){
+          $("#loading").show();
+        }
+        else{
+          $("#loading").hide();
+        }
+      },
+      defaultView: curViewName,
+
+        events: function(start, end, callback){
+          $("#loading").show();
+          if(ajaxRequest)
+            ajaxRequest.abort();
+          ajaxRequest = $.getJSON('/calendar/fetch_events',{
+            // our hypothetical feed requires UNIX timestamps
+            start:  Math.round(start.getTime() / 1000),
+            end: Math.round(end.getTime() / 1000),
+            _:new Date().getTime()
+          },
+          function(data) {
+            template_hash = [];
+            events = [];
+            for (i=0; i< data.length;i++) {
+              if(data[i]){
+                $.each(data[i][0].events,function(elem,this_item) {
+                  if(this_item){
+                    events.concat(createEventJSONForDisplay(this_item.event,events,true));
+                  }
+                });
+              }
+            }
+            callback(events);
+            if(eventDataSource){
+              // remove events which we added using addEventDataSource method to avoid duplicate issue on view change
+              $('#calendar').fullCalendar( 'removeEventSource', eventDataSource)
+              eventDataSource = null;
+            }
+            hideHiddenCalendarEvents();
+            $("#loading").hide();
+          });
+        },
+
+      windowResize: function(view) {
+        hideHiddenCalendarEvents();
+      },
+      eventAfterRender: function(event, element,view) {
+        element.qtip({
+          content:{
+            text:$('#appt-details-tooltip'),
+            prerender: false,
+            title: {
+              text: '',
+              button: 'Close'
+            }
+          },
+          position: {
+            target: 'mouse',
+            corner: {
+              tooltip: 'bottomMiddle', // ...and position it center of the screen
+              target: 'topMiddle' // ...and position it center of the screen
+            },
+            adjust: {
+              screen: true,
+              mouse: false,
+              resize: false,
+              scroll: false
+            }
+          },
+          api:{
+            beforeRender: function (){
+              setTooltipDetails(event, element);
+            },
+            onRender: function() {
+              createEllipsisForTheElement($('.event-tool-tip-text:visible'));
+            }
+          },
+          show: {
+            when: 'click', // Show it on click...
+            solo: true, // ...and hide all others when its shown
+            delay: 0,
+            effect: {
+              length:0
+            }
+          },
+          hide: {
+            when:{
+              event:'unfocus'
+            },
+            delay: 0,
+            fixed: true,
+            effect: {
+              length:0
+            }
+
+          },
+          style: {
+            width: 380,
+            height: 232,
+            padding: 0,
+            tip: true,
+            border: {
+              radius: 2,
+              //  width : 1,
+              color: 'black'
+            }
+          }
+        });
+      },
+
+        dayClick: function(date, allDay, jsEvent, view) {
+          setCreateApptDefaultValues(date);
+          if((view.name == "immediateAgendaView" || view.name == "shortTerm" ) && allDay){
+            $('#all-day-option').attr('checked','checked');
+            setTime()
+          }
+          $("#title").val("");
+          $("#edit_event_template_id").val("");
+
+          scrollPositionBeforeChangingTheFocus = $("#parent_calendar").attr("scrollTop");
+          loadCreateApptOverlay();
+          //$("#scrollPosition").html($("#parent_calendar")[0].scrollTop)
+        },
+      drop:function(date,allDay, jsEvent, ui){
+        setCreateApptDefaultValues(date);
+        calendarView = $("#calendar").fullCalendar("getView");
+        if((calendarView.name == "immediateAgendaView" || calendarView.name == "shortTerm" )  && allDay ){
+          $('#all-day-option').attr('checked','checked');
+          setTime()
+        }
+        scrollPositionBeforeChangingTheFocus = $("#parent_calendar").attr("scrollTop");
+        loadCreateApptOverlay();
+        $("#loading").show();
+        var postData = {
+          event_template_id: event_template_id,
+          date: date
+        };
+        $.ajax({
+          type: "POST",
+          data: postData,
+          dataType:'json',
+          url: '/events/create_event_json_from_template',
+          success: function(data) {
+            $("#loading").hide();
+            loadCreateAppointmentDefaultValuesFromTemplate(data["event_template"].event_template);
+            var calendars = new Object();
+            if(data["calendars"].length > 0 ){
+              $.each(data["calendars"],function(index,calendar){
+                calendars[calendar["id"]] = calendar["title"]
+              });
+              constructCalendarsDropdown(calendars,'#calendar_options')
+              }
+            //$("p#success_flash_message").html("Event Moved");
+            //  $("#calendar").fullCalendar('refetchEvents');
+          },
+          error: function() {
+            $("#loading").hide();
+            revertFunc();
+          }
+        });
+      },
+
+      eventDrop: function(calEvent, dayDelta, minuteDelta, allDay, revertFunc, jsEvent, ui, view) {
+        all_day = allDay ? 1:0
+        $("#loading").show();
+        var postData = {
+          //removing the occurrence id before sending to server
+          id: calEvent.id.split("_")[0],
+          recurring_instance_number: calEvent.id.split("_")[1],
+          day_delta: dayDelta,
+          minute_delta: minuteDelta,
+          all_day: all_day,
+          start: $('#calendar').fullCalendar('getView').visStart.getTime()/1000,
+          end: $('#calendar').fullCalendar('getView').visEnd.getTime()/1000
+        };
+        $.ajax({
+          type: "POST",
+          data: postData,
+          dataType:'json',
+          url: '/events/move',
+          success: function(data) {
+            var filter=reccurringInstanceFilterGenerator((calEvent.id.split("_")[0]),0)
+            removeFiteredEventsFromCalendar(filter);
+            addEventstoCalendar(data.events)
+            hideHiddenCalendarEvents();
+            $("#loading").hide();
+            //$("p#success_flash_message").html("Event Moved");
+            event_title = (calEvent.title == " ") ? "Event" : calEvent.title;
+            event_moved_text = "Your event was successfully rescheduled."
+            setFlashMessage("success", event_moved_text);
+            //  $("#calendar").fullCalendar('refetchEvents');
+          },
+          error: function(request,error) {
+            if(request.readyState == 0 || request.status == 0) 
+              return;  // it's not really an error
+            $("#loading").hide();
+            setFlashMessage("error", request.responseText, "");
+            revertFunc();
+            hideHiddenCalendarEvents();
+          }
+        });
+       // ui.draggable.remove();
+      }
+    });
+    $('#mini-calendar').fullCalendar({
+      header: {
+        left: 'prev',
+        center: 'title',
+        right: 'next'
+      },
+      //weekMode: 'liquid',
+      aspectRatio: 1.4,
+      // height: 200,
+      selectable: true,
+      selectHelper: true,
+      unselectAuto: false,
+        buttonText: {
+        prev: '&nbsp;<span class="rounded-corner"><img src="/images/prev.gif" onclick="removeActiveDayselection()" alt="prev"/></span>&nbsp;',
+        next: '&nbsp;<span class="rounded-corner"><img src="/images/next.gif" onclick="removeActiveDayselection()" alt="next"/></span>&nbsp;'
+      },
+      viewDisplay: function(view) {
+         $('#mini-calendar div.fc-view-month table thead').remove();
+        },
+     dayClick: function(date, allDay, jsEvent, view) {
+        goToDate(date);
+        if(oldActiveDay){
+             $(oldActiveDay).removeClass("activeDay");
+        }
+        $(this).addClass("activeDay");
+        oldActiveDay = this;
+       }
+   });
+    changeViewTo(curViewName)
+  });
+  viewStartTime = 0
+  viewEndTime = 0
+</script>
+
+
+
+<!-- create-appt dialog -->
+<div id="appt-details-tooltip" class="rounded-corner appt-details-tooltip" style="display: none; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+      <div class="span-24" style="overflow: hidden;">
+        <div class="column event-details-column">
+            <img id="event-icon" class="fc-event-icon-img" style="padding-right: 5px;">
+        </div>
+        <div id="event-title" class="span-19 event-tool-tip-text"></div>
+      </div>
+      <div class="span-24" id="calendar_name_div">
+        <div class="span-23 calendar-name  participants reccurring reminder">
+        <div id="calendar_name" class="column event-tool-tip-text"> </div>
+        <span class="reccurring" id="reccurring_img"></span>
+        <span class="participants" id="participants_img"></span>
+        <span class="reminder" id="reminder_img"></span>
+        </div>
+     </div>
+
+    <div class="span-24 ">
+        <div class="span-5 column event-details-label event-details-column"> When: </div>
+        <div id="event-when" class="span-17 event-tool-tip-text">
+          
+        </div>
+      </div>
+      <div class="span-24">
+        <div class="span-5 column event-details-label event-details-column"> Where: </div>
+        <div id="event-where" class="span-15 event-tool-tip-text">
+   
+        </div>
+      </div>
+      <div class="span-24">
+        <div class="span-5 column event-details-label event-details-column"> Creator: </div>
+        <div id="event-creator" class="span-15 event-tool-tip-text">
+        </div>
+      </div>
+      <div class="span-24">
+        <div class="span-5 column event-details-label event-details-column"> Who: </div>
+        <div id="event-who" class="span-15 event-tool-tip-text">
+        
+        </div>
+      </div>
+      <div class="span-24" id="attending_div">
+        <div class="span-5 column event-details-label event-details-column"> Attending: </div>
+        <div id="event-attende-status" class="append-bottom event-tool-tip-text status">
+          Yes - <a href="#" class="event-details-links" id="attende-status"> Change to No </a>
+        </div>
+        
+      </div>
+  <div class="span-24 padding-top-1 legend-bottom-line-parent">
+        <div class="legend_bottom_line"></div>
+    </div>
+    <div class="span-24 padding-top-1 event-details-column event-edit-link-container">
+        <div class="heading"><a href="#" class="event-details-links event-edit-link" id="event-edit-link">Edit Event Details</a></div>
+    </div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $('document').ready(function(){
+    $("#templates ul li img").draggable({
+      helper:'clone',
+      appendTo:'body'
+    });
+    $("#create-appt").hide();
+    $('#calendars_list div.my-calendar label').textOverflow();
+
+    $("#add_event").click(function(){
+      $("#edit_event_template_id").val("");
+      loadCreateApptOverlayForImmediateView()
+    });
+
+    $(".template-item img[title]").tooltip({
+      tip: '#tooltip',
+      onShow: function() {
+        $('#tooltip div').textOverflow();
+      },
+      offset: [60, 50],
+      position: ["right center"]
+    })
+   $("#calendars_list div.my-calendar").quickpaginate({ perpage:9, showcounter: true, pager : $("#calendar_list_counter") });
+   $("#templates ul li").quickpaginate({ perpage: 33, showcounter: true, pager : $("#template_list_counter") });
+  })
+
+  $(document).keydown(function(e){
+    userScroll=false;
+    keyCode = e.keyCode;
+    arrow = {left: 37, up: 38, right: 39, down: 40 };
+    if($("#view-event-appt").is(":visible") != true && $("#feedback").is(":visible") != true) {
+     switch (keyCode) {
+      case arrow.left:
+        changeDisplayedDate('prev');
+        break;
+      case arrow.right:
+        changeDisplayedDate('next');
+        break;
+    }
+   }
+  });
+</script>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="footer span-24 clear column prepend-top">
+        <div id="cc_footer" class="span-24 rounded-corner footer-links" data-corner="bl br" style="border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+  <div>
+    <div class="span-24 prepend-top">
+      <strong>HELP</strong>
+      <a class="dark-blue-text" title="" href="#">FAQs</a>   
+      <a class="dark-blue-text" title="" href="/tour">Tutorials</a>   
+      <a href="#" class="feedback_link dark-blue-text">Feedback</a>
+    </div>
+  </div>
+  <div>
+    <div class="span-24">
+      <strong class="footer-legal-link">LEGAL</strong>
+      <a class="dark-blue-text" title="" href="/privacy_policy">Privacy Policy</a>   
+      <a class="dark-blue-text" title="" href="/terms_of_service">Terms of Service</a>
+      <a class="dark-blue-text" title="" href="#">Outlook Add In</a>
+    </div>
+  </div>
+  <div>
+    <div class="span-24 append-bottom">
+      <strong>INFO</strong>
+      <a class="dark-blue-text" title="" href="/about">About</a>
+      <a class="dark-blue-text" title="" href="#">Facebook</a>   
+      <a class="dark-blue-text" title="" href="#">Twitter</a>
+      <a class="dark-blue-text" title="" href="/feedbacks/contact">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <div class="footer prepend-top column span-24 last clear">
+  <div class="span-21 copyright">
+    Copyright © 2010 Excion Corporation. All rights reserved.
+  </div>
+</div>
+
+    </div>
+
+    
+  
+
+
+    <div>
+      
+  <div id="view-event-appt" class="span-24" style="display: none; ">
+  <div id="view_event" class="prepend-top prepend-3 span-18 append-bottom">
+    <form action="/events/create" class="new_event" id="event_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="2v/2LdNKDXPP/SOaSG3zVADEWgt2rkdKFUVDlzh4CTc="></div>
+      <input id="event_start_time" name="event[start_time]" type="hidden">
+      <input id="event_end_time" name="event[end_time]" type="hidden">
+      <input id="edit_event_template_id" name="event[event_template_id]" type="hidden">
+      <input type="hidden" id="option" name="option" value="">
+      <input type="hidden" id="recurring_instance_number" name="recurring_instance_number" value="">
+      <input type="hidden" id="view_start_time" name="start" value="">
+      <input type="hidden" id="view_end_time" name="end" value="">
+      <input type="hidden" id="repeat_freq_old" name="repeat_freq_old" value="">
+      <input type="hidden" id="repeat_interval_old" name="repeat_interval_old" value="">
+      <input type="hidden" id="until_date_old" name="until_date_old" value="">
+      <input type="hidden" id="repeat_until_forever_old" name="repeat_until_forever_old" value="">
+      <input type="hidden" id="is_synced_calendar_recurring_event" name="is_synced">
+      <div id="event_tabs" class="light-box-top lightbox_border tabbed_area span-23 ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <div class="close"></div>
+        <div class="span-24 append-bottom light-box-title">
+          <div id="light-box-title" class="column">Create Event</div>
+          <div id="saving" class="prepend-7 span-3 left-align">&nbsp;Saving...</div>
+          <div id="deleting" class="prepend-7 span-3 left-align">&nbsp;Deleting...</div>
+        </div>
+        <ul class="tabs-list ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+          <li id="event_detail_li" class="rounded-corner ui-state-default ui-corner-top ui-tabs-selected ui-state-active" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="event_detail_tab" href="#tab-1">Event Details</a></li>
+          <li id="recurring_detail_li" class="rounded-corner ui-state-default ui-corner-top" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="recurring_detail_tab" href="#tab-2">Recurring Details</a></li>
+          <li id="invite_detail_li" class="rounded-corner ui-state-default ui-corner-top" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="invite_detail_tab" href="#tab-3">Guests</a></li>
+          <li class="rounded-corner ui-state-default ui-corner-top" id="change_calendar_button" style="display: none; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="change_calendar_button_link" href="#change-calendar-tab">Change Calendar</a></li>
+          <li class="rounded-corner ui-state-default ui-corner-top" id="delete_event_button" style="display: none; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">
+            <a id="delete_button" class="red_link" onclick="showDeleteOptions()">Delete Event</a></li>
+          <li class="rounded-corner ui-state-default ui-corner-top" id="delete_options_button" style="display: none; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="delete_options_button" href="#del_options-tab"></a></li>
+          <li class="rounded-corner ui-state-default ui-corner-top" id="edit_options_button" style="display: none; border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "><a id="edit_options_button" href="#edit_options-tab"></a></li>
+
+        </ul>
+        <div id="tab-1" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom">
+          <div class="span-24">
+            <div class="span-5 column left-align">
+              <label for="title" class="input_label"> Event title:</label>
+            </div>
+            <div class="span-18 left-align">
+              <input type="text" id="title" name="event[title]" size="30">
+            </div>
+          </div>
+          <div class="span-24 ">
+            <div class="span-5 column left-align">
+              <label for="location" class="input_label"> Location:</label>
+            </div>
+            <div class="span-18 append-bottom left-align">
+              <input type="text" size="30" name="event[location]" id="event_location">
+            </div>
+          </div>
+          <input type="hidden" id="num_occurrences" name="numOccurrence" value="">
+          <input type="hidden" id="occurrence_id" name="occurrenceId" value="">
+          <input type="hidden" id="event_id" name="eventId" value="">
+          <input type="hidden" id="start_time" name="start_time" value="">
+          <input type="hidden" id="event_all_day" name="event[all_day]" value="">
+          <div class="span-24">
+            <div class="span-5 column left-align">
+              <label for="when" class="input_label">Time:</label>
+            </div>
+
+            <div class="span-18 append-bottom left-align">
+
+              <input type="text" size="12" id="when" name="event[when]" class="dateRange">
+              <input type="text" size="8" id="when_time" name="event[when_time]" onclick="$(&quot;.time-picker&quot;).hide();" class="dateRange" autocomplete="OFF">
+              <label id="to_label">to</label>
+              <input type="text" size="12" id="to" name="event[to]" class="dateRange">
+              <input type="text" size="8" id="to_time" name="event[to_time]" onclick="$(&quot;.time-picker&quot;).hide();" class="dateRange" autocomplete="OFF">
+              <div class="span-5 column append-bottom" style="height: 30px;">
+                <input type="checkbox" id="all-day-option" name="allday" onclick="setTime()" class="all-day-checkbox">
+                <label class="input_label" for="all-day-option">&nbsp;All Day</label>
+              </div>
+              <div class="column">
+                <label id="date-range-error" class="error_msg input_label"></label>
+              </div>
+              <div>
+                <label class="error_msg input_label" id="date-range-error"></label>
+              </div>
+            </div>
+          </div>
+          <div class="span-24">
+            <div class="span-5 column left-align">
+              <label for="event_description" class="input_label">Description:</label>
+            </div>
+            <div class="span-18 left-align">
+              <textarea rows="20" name="event[description]" id="event_description" cols="10"></textarea>
+            </div>
+          </div>
+          <div class="span-24">
+            <div class="span-5 column left-align">
+              <label class="input_label" for="event_calendar">Calendar:</label>
+            </div>
+            <div class="span-18 left-align">
+              <div class="span-24 column">
+                <select selected="15" name="calendar_id" id="calendar_options" class="valid ">
+                  <option></option>
+                </select>
+                <a id="change_calendar" class="change-calendar-link" onclick="hideEditEventControles()">Change Calendar</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="span-24 append-bottom">
+            <div class="span-5 column left-align">
+              <label class="input_label">Reminder:</label>
+            </div>
+            <div class="span-15 left-align">
+              <input id="reminder_none" name="reminder_option" type="radio" value="none" checked="checked" onchange="toggleReminderOption(this.value)">
+              <label class="input_label">&nbsp;None&nbsp;</label>
+              <input id="reminder" name="reminder_option" type="radio" value="email" onchange="toggleReminderOption(this.value)">
+              &nbsp;&nbsp;<input id="reminder_value" name="event[reminder_value]" type="text" value="15" size="2" maxlength="2">&nbsp;&nbsp;
+              <select name="event[reminder_unit]" id="reminder_unit" class="auto-size">
+                <option value="minutes" selected="">Minutes</option>
+                <option value="hours">Hours</option>
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+              </select>
+            </div>
+            <div class="span-3 prepend-top"></div>
+            <div class="span-10 prepend-8 left-align recurring_tab_label">
+              <label id="reminder-error" class="error_msg input_label"></label>
+            </div>
+          </div>
+          <div id="editable-1" class=" editable span-24 append-bottom">
+            <div class="prepend-9 span-6 column left-align">
+              <p id="save-button">
+                <a class=" rounded-corner submit-button" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "> Update Event </a>
+              </p>
+            </div>
+            <div class="prepend-14 span-3 left-align">
+              <p class="back-button">
+                <a onclick="close_view()">Cancel</a>
+              </p>
+            </div>
+          </div>
+          <div id="noneditable-1" class="noneditable span-24">
+            <div class="prepend-11 span-6 left-align">
+              <p class="back-button">
+                <a onclick="close_view()">Cancel</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="tab-2" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+          <div class="span-24">
+            <div class="span-5 column recurring_tab_label left-align">
+              <label for="repeat_freq" class="input_label">Recurring:</label>
+            </div>
+            <div id="repeat_freq_row" class="span-18 left-align">
+              <select name="event[freq]" id="repeat_freq" onchange="toggleRepeatOptions()" class="auto-size">
+                <option value="Never" selected="selected">Does not repeat</option>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+              </select>
+            </div>
+          </div>
+          <div class="span-24">
+            <div class="span-5 column recurring_tab_label left-align">
+              <label for="repeat_interval" class="input_label">Every:</label>
+
+            </div>
+            <div id="repeat_interval_row" class="span-18 left-align">
+              <select name="event[interval]" id="repeat_interval" class="auto-size" onchange="toggleRepeatOptions()">
+                <option selected="selected" value="1">1</option>
+                
+                    <option value="2">2</option>
+                  
+                    <option value="3">3</option>
+                  
+                    <option value="4">4</option>
+                  
+                    <option value="5">5</option>
+                  
+                    <option value="6">6</option>
+                  
+                    <option value="7">7</option>
+                  
+                    <option value="8">8</option>
+                  
+                    <option value="9">9</option>
+                  
+                    <option value="10">10</option>
+                  
+                    <option value="11">11</option>
+                  
+                    <option value="12">12</option>
+                  
+                    <option value="13">13</option>
+                  
+                    <option value="14">14</option>
+                  
+                    <option value="15">15</option>
+                  
+                    <option value="16">16</option>
+                  
+                    <option value="17">17</option>
+                  
+                    <option value="18">18</option>
+                  
+                    <option value="19">19</option>
+                  
+                    <option value="20">20</option>
+                  
+                    <option value="21">21</option>
+                  
+                    <option value="22">22</option>
+                  
+                    <option value="23">23</option>
+                  
+                    <option value="24">24</option>
+                  
+                    <option value="25">25</option>
+                  
+                    <option value="26">26</option>
+                  
+                    <option value="27">27</option>
+                  
+                    <option value="28">28</option>
+                  
+                    <option value="29">29</option>
+                  
+                    <option value="30">30</option>
+                  
+                </select>
+                <label id="repeat_every_text" class="input_label"></label>
+              </div>
+            </div>
+            <div class="span-24 ">
+              <div class="span-5 column recurring_tab_label left-align">
+                <label for="event_repeat_until" class="input_label">Until:</label>
+              </div>
+              <div id="repeat_until_row" class="span-18 left-align">
+                <div class="repeat-forever-section recurring_tab_label">
+                  <input type="radio" id="repeat_until_forever" onchange="toggleUntilDate()" name="event[repeat_until]" value="forever"><label class="input_label">&nbsp;&nbsp;Forever</label>
+                </div>
+                <div class="repeat-until-section">
+                  <input type="radio" id="repeat_until_date" name="event[repeat_until]" onchange="toggleUntilDate()"><label class="input_label">&nbsp;&nbsp;Until</label>
+                  &nbsp;&nbsp;&nbsp;<input type="text" onchange="untilDateChange()" class="dateRange" name="until" id="until_date" size="12">
+                </div>
+              </div>
+              <div class="span-24 recurring_tab_label center-text column">
+                <label id="until-range-error" class="error_msg input_label"></label>
+                <label id="synced-calendar-update-error" class="error_msg input_label"></label>
+              </div>
+            </div>
+            <div id="editable-2" class="editable span-24 append-bottom">
+              <div class="prepend-9 span-6 column left-align">
+                <p id="save-button">
+                  <a class="rounded-corner submit-button" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "> Update Event </a>
+                </p>
+              </div>
+              <div class="prepend-14 span-6 left-align">
+                <p class="back-button">
+                  <a onclick="close_view()">Cancel</a>
+                </p>
+              </div>
+            </div>
+            <div id="noneditable-2" class="noneditable span-24">
+              <div class="prepend-11 span-6 left-align">
+                <p class="back-button">
+                  <a onclick="close_view()">Cancel</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="tab-3" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+            <div class="span-24 append-bottom left-align">
+              <div id="participants-list" class="span-24" style="display:none">
+
+              </div>
+              <div class="column span-24 left-align">
+                <div id="event_participant_emails_list" class="span-24">
+                </div>
+              </div>
+            </div>
+            <div class="span-24 push-0 append-bottom">
+              <div id="add_guests_area" class="span-24 left-align">
+                <div class="column span-24">
+                  <label class="input_label">Add Guests:</label>
+                </div>
+                <div class="span-13 clear">
+                  <span class="help-text">
+                    Enter the Email ID of guests separated by comma
+                  </span>
+                </div>
+                <div class="column span-15 left-align">
+                  <textarea id="event_participant_emails" cols="40" rows="20" name="event[participant_emails]"></textarea>
+                </div>
+                <div class="plaxo prepend-top span-8 column last left-align">
+                  <label class="input_label">or</label>
+                  <a href="#" id="get_online_contacts" class="rounded-corner" onclick="plaxo_click()" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Get Online Contacts</a>
+                </div>
+                <div class="prepend-6 span-10 left-align">
+                  <label id="email-list-error" class="error_msg input_label"></label>
+                </div>
+              </div>
+            </div>
+
+            <div id="editable-3" class="editable span-24  append-bottom">
+              <div class="prepend-9 span-6 column left-align">
+                <p id="save-button">
+                  <a class="rounded-corner submit-button" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "> Update Event </a>
+                </p>
+              </div>
+              <div class="prepend-14 span-6 left-align">
+                <p class="back-button">
+                  <a onclick="close_view()">Cancel</a>
+                </p>
+              </div>
+            </div>
+            <div id="noneditable-3" class="noneditable span-24 append-bottom">
+              <div class="prepend-11 span-6 left-align">
+                <p class="back-button">
+                  <a onclick="close_view()">Cancel</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="del_options-tab" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+            <div id="del_otions_area">
+              <div class="span-24">
+                <div class="prepend-7 span-15">
+                  <input type="radio" id="del_one" name="delete_opt" value="current"> <label for="del_one" class="input_label">&nbsp;&nbsp;Delete this instance</label>
+                  <br>
+                  <input type="radio" id="del_future" name="delete_opt" value="future">
+                  <label for="del_future" class="input_label">&nbsp;&nbsp;Delete this and all future instances</label>
+                  <br>
+                  <input type="radio" id="del_all" name="delete_opt" value="all">
+                  <label for="del_all" class="input_label">&nbsp;&nbsp;Delete all instances</label>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="span-24 prepend-top prepend-1">
+              <div class="span-13 column">
+                <label>Are you sure you want to delete this event?</label>
+              </div>
+              <div class="span-2 column">
+                <p class="back-button">
+                  <a onclick="deleteEvent()">Yes</a>
+                </p>
+              </div>
+              <div class="span-2 column prepend-2">
+                <p class="back-button">
+                  <a onclick="close_view()">No</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div id="edit_options-tab" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+            <div id="edit_otions_area">
+              <div class="span-24">
+                <div class="prepend-7 span-15">
+                  <input type="radio" id="edit_one" name="edit_opt" value="current"> <label for="edit_one" class="input_label">&nbsp;&nbsp;Update this instance</label>
+                  <br>
+                  <input type="radio" id="edit_future" name="edit_opt" value="future">
+                  <label for="del_future" class="input_label">&nbsp;&nbsp;Update this and all future instances</label>
+                  <br>
+                  <input type="radio" id="edit_all" name="edit_opt" value="all">
+                  <label for="edit_all" class="input_label">&nbsp;&nbsp;Update all instances</label>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class="span-18 prepend-top prepend-1">
+              <div class="span-24">
+                <div class="prepend-10 span-9 column ">
+                  <p id="save-button">
+                    <a class="rounded-corner" onclick="updateEvent(false)" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; "> Update Event </a>
+                  </p>
+                </div>
+                <div class="prepend-17 span-6">
+                  <p class="back-button ">
+                    <a onclick="close_view()">Cancel</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="change-calendar-tab" class="content tabbed-box ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+            <div id="change-calendar-area">
+              <div class="span-24">
+                <div class="span-24 append-bottom spacer">
+                  <div class="span-5 column left-align">
+                    <label class="input_label">Event title:</label>
+                  </div>
+                  <div class="span-16 left-align">
+                    <label class="input_label" id="change_calendar_event_title"></label>
+                  </div>
+                </div>
+                <div class="span-24 append-bottom spacer">
+                  <div class="span-5 column left-align">
+                    <label class="input_label">Current Calendar:</label>
+                  </div>
+                  <div class="span-16 left-align">
+                    <label class="input_label" id="current_calendar"></label>
+                  </div>
+                </div>
+                <div class="span-24">
+                  <div class="span-5 column left-align">
+                    <label class="input_label">New Calendar:</label>
+                  </div>
+                  <div class="span-18 left-align">
+                    <select selected="15" name="change_calendar_id" id="change_calendar_options" class="valid">
+                      <option></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="span-24 note_label">
+                  <label>NOTE: Any reminders you may have set in your external calendar will not get transferred to your destination calendar.</label>
+                </div>
+              </div>
+            </div>
+            <div class="span-18 prepend-top  append-bottom">
+              <div class="span-24">
+                <div class="prepend-8 span-9 column left-align">
+                  <p id="save-button">
+                    <a class="rounded-corner" id="change-calendar" onclick="updateEventCalendar()" style="border-top-left-radius: 4px 4px; border-top-right-radius: 4px 4px; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 4px 4px; ">Change Calendar</a>
+                  </p>
+                </div>
+                <div class="prepend-16 span-6 left-align">
+                  <p class="back-button ">
+                    <a onclick="closeChangeCalendarView()">Cancel</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </form>
+      <script type="text/javascript">
+        $(function() {
+          // setup ul.tabs to work as tabs for each div directly under div.panes
+          var $tabs = $("#event_tabs").tabs({
+            selected: 0,
+            show :  function(event, ui) {
+              if (ui.index == 0) {
+                $("#title").focus();
+              }
+              else {
+                $(".time-picker").hide();
+              }
+              if (ui.index == 2) {
+                if($("#event_participant_emails_list").val() == "") {
+                  $("#event_participant_emails_list").val("Enter comma separated emails.");
+                  $("#event_participant_emails_list").focus(function() {
+                    if($("#event_participant_emails_list").val() == "Enter comma separated emails.")
+                      $("#event_participant_emails_list").val("");
+                  })
+                }
+              }
+              if(ui.index == 1) {
+                if (!$("#until_date").attr("disabled") && !isUntilRangeValid()) {
+                  $("#until-range-error").html("<span>Until date should be greater than or equal to start date.</span>");
+                }
+              }
+            },
+            select: function(event, ui) {
+              var selected_tab = $tabs.tabs('option','selected')
+              if (selected_tab == 0) {
+                if (!isDateRangeValid()) {
+                  $("#date-range-error").html("<span>Please specify a correct date range.</span>");
+                  return false;
+                }
+                if(!$("reminder").attr("disabled") && !isReminderValid()){
+                  $("#reminder-error").html("<span>Give a valid value for reminder.</span>");
+                  return false;
+                }
+              }
+              else if (selected_tab == 1) {
+                if (!$("#until_date").attr("disabled") && !isUntilRangeValid()) {
+                  $("#until-range-error").html("<span>Until date should be greater than or equal to start date.</span>");
+                  return false
+                }
+                if(isInValidRecurringEventUpdate()){
+                  $("#synced-calendar-update-error").html("<span style='white-space: nowrap'>The changes you have made to the event will not be shown in your external calendar.</span>");
+                  return false
+                }
+              }
+              else if (selected_tab == 2) {
+                if($("#event_participant_emails").val() != "Enter comma separated emails.")
+                  if (!isEmailListValid()) {
+                    $("#email-list-error").html("<span>One or more emails are invalid.</span>");
+                    return false;
+                  }
+              }
+              clearEventFormErrors()
+              return true;
+            }
+          });
+        });
+
+        $(document).ready(function(){
+          $("#when_time,#to_time").timePicker({show24Hours:!is12HoursTime()});
+          //$.validator.addMethod("validateEventDateRange", validateEventDateRange, "Please specify a correct date range.");
+          $.validator.addClassRules({
+            //dateRange: {validateDateRange:true}
+          });
+          $("#event_form").validate({
+            /*groups:{
+                  validateEventDateRange: "when when_time to to_time"
+               },*/
+            rules: {
+              "event[participant_emails]": {
+                validateMultipleEmails: true
+              },
+              "event[reminder_value]": {
+                digits: true
+              }
+            },
+            success: function(label) {
+              clearEventFormErrors();
+            },
+            errorPlacement: function(error, element) {
+              if(element.id == "event_participant_emails")
+                $("#email-list-error").html(error);
+            }
+          });
+          var options ={
+            success: parseResponseForEvent,
+            error: showErrorForAJAXRequest
+          };
+          $('#event_form').ajaxForm(options);
+          $("#when_time").change(function() {
+            setToTimeDuration();
+            resetDateRangeErrorMessageIfValidDateRange();
+          });
+          $("#to_time,#when,#to").change(function() {
+            resetDateRangeErrorMessageIfValidDateRange();
+          });
+          $("#until_date").change(function() {
+            if (isUntilRangeValid()) {
+              $("#until-range-error").html("");
+            }
+          });
+        });
+      </script>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#view-event-appt").hide();
+      // select the overlay element - and "make it an overlay"
+      event_appt_box = $("#view-event-appt").overlay({
+        expose: {
+          color: '#222222',// you might also consider a "transparent" color for the mask
+          loadSpeed: 200,// load mask a little faster
+          opacity: 0.8// highly transparent
+        },
+        closeOnClick: false,
+        top: 'center',
+        api: true,
+        speed: 2,
+        left: 'center',
+        fixed: true,
+        onClose: function(){
+          $(".time-picker").hide();
+        }
+      });
+     
+    })
+  </script>
+
+
+    </div>
+    
+  <script type="text/javascript" src="https://www.plaxo.com/css/m/js/util.js"></script>
+  <script type="text/javascript" src="https://www.plaxo.com/css/m/js/basic.js"></script>
+  <script type="text/javascript" src="https://www.plaxo.com/css/m/js/abc_launcher.js"></script>
+  <script type="text/javascript"><!--
+    function onABCommComplete() {
+      // OPTIONAL: do something here after the new data has been populated in your text area
+    }
+    //--></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    
+  
+
+<a href="#" id="feedback_link" class="feedback_link left"></a></body></html>

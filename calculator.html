@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />   
+    <link rel="stylesheet" href="css/blueprint/liquid.css" type="text/css" />
+    <link rel="stylesheet" href="css/blueprint/calc.css" type="text/css">
+    <script type="script/server" src="css/blueprint/calc.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">	
+	<h1 class="prepend-7">Simple Calculator</h1>
+      </div>
+      <div class="prepend-7 calculator">
+	<div>
+	<label>Operand 1 : </label>
+	<input type="text" value="0" id="operand1">
+	<span id="operand1-help" class=""></span>	  
+	</div>
+	<div>
+	<label>Operator : </label>
+	<input type="text" value="+" id="operator">
+	<span id="operator-help"></span>
+	</div>
+	<div>
+	<label>Operand 2 : </label>
+	<input type="text" value="0" id="operand2">
+	<span id="operand2-help"></span>
+	</div>
+	<div>
+	<label>Result : </label>
+	<input type="text" value="0" id="result" readonly="readonly">
+	<span id="res-help"></span>	  
+	</div>
+      </div>
+    </div>    
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+    <link rel="stylesheet" href="calc.css" type="text/css" media="screen, projection">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+	<img src="calc.jpg" alt="Calculator" id="header-image">
+	<h1>Javascript Calculator</h1>
+      </div>
+      <div id="calculator">
+	<table>
+	  <tbody><tr>
+	    <td>Operand 1 : </td>
+	    <td><input type="text" value="0" id="operand1" class="operand"></td>
+	    <td><span id="operand1-help" class=""></span></td>
+	  </tr>
+	  <tr>
+	    <td>Operator : </td>
+	    <td><input type="text" value="+" id="operator" class="operator"></td>
+	    <td><span id="operator-help"></span></td>
+	  </tr>
+	  <tr>
+	    <td>Operand 2 : </td>
+	    <td><input type="text" value="0" id="operand2" class="operand"></td>
+	    <td><span id="operand2-help"></span></td>
+	  </tr>
+	  <tr>
+	    <td>Result : </td>
+	    <td><input type="text" value="0" id="result" readonly="readonly"></td>
+	    <td><span id="res-help"></span></td>
+	  </tr>
+
+	</tbody></table>
+      </div>
+    </div>
+  
+
+  </body>
+</html>

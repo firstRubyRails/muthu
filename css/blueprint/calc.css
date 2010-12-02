@@ -1,0 +1,23 @@
+.calculator {
+    margin-top: 5%;
+}
+
+#operand1 {   
+    margin-left: 20px;
+}
+
+#operand2 {
+    margin-left: 20px;
+}    
+
+#operator {
+    margin-left: 28px;
+}
+
+#result {
+    margin-left: 42px;
+}
+
+h1,label {
+    color: #2D66CF;
+}

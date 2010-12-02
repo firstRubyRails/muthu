@@ -1,0 +1,21 @@
+Applications in Tempus:
+           * In Account Management:
+	         * Creating new account
+                 * Validating all fields
+                 * Signup the users
+             * Account activation
+             * Manage Users
+                * Invite other User to account
+                * Remove User    
+	     * Manage Projects
+		* Add the Project
+		* Add the members to Project
+	     * Entries
+	         * Create ,Delete and Edit entries
+	     * Pivotal Tracker feature
+	     * Tempus Token feature
+
+
+ Error:
+      * while doing Filter Entries                        
+           

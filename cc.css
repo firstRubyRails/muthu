@@ -1,0 +1,269 @@
+.container {
+    position: relative;
+}
+
+#calender-page {
+    width: 95%;
+}
+
+/* CSS for Header */
+.header {      
+    height: 9.3%;
+}
+.top-menu{
+    width: 46%;
+    padding-top: 1.5%;
+    text-align: right;    
+}
+.top-menu a {
+    
+}
+/* end */
+/* CSS for Center-content */
+.center {        
+    height: 75%;    
+}
+
+/* CSS for LeftSide */
+
+.templates {
+    padding-top: 1.18%;
+    width: 9%;
+}
+
+.left-title{   
+    color: #2D66CF;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 8px; 
+    text-align: center;    
+}
+
+.quick-event {
+    width: 100%;
+}
+.quick-event ul{    
+    padding-left: 0.8em;
+    list-style-type:none;
+}
+.quick-event li { 
+    padding: 3px;    
+}
+.quick-event{    
+    padding-left: 0%;
+    padding-bottom: 9%;    
+    overflow: hidden;
+}
+
+.event{
+    background-color: #E6E6E6;
+    height: 22px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding-top: 4px;
+    text-align: center;
+    width: 25px ;    
+}
+
+.manage-list { 
+    padding-left: 8%;    
+}
+
+/* end - left*/
+
+/* Middle layout */
+#content {    
+    margin-top: -0.11%;
+    margin-left: 0.23%;
+    width: 72.32%;
+    height: 75.8%;
+    overflow: hidden;    
+}
+
+#content img {
+    width:100%;
+    height: 100%;
+}
+
+/* end - middle layout */
+
+/* CSS for Rightsidebar */
+
+.calendar {
+    width:100%;    
+    height: 29.4%;   
+    overflow:hidden;
+}
+
+.calendar img {
+    width: 100%;
+    height: 100%;
+}
+
+.calendar_details {
+    margin-top: -0.11%;
+    width: 17.28%;
+}
+
+.my_calendars {
+    margin-top: 8px;  
+    margin-left: 1px;
+}
+
+.another-test {
+    height: 3.8%;
+    text-align: top;
+    margin-top:8px;
+    margin-bottom: 2px;
+    color: white;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    background-color: #C00;
+}
+
+.test {   
+    height: 3.8%;
+    margin-top: 4px;
+    color: white;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    background-color: #EB1;
+}
+.outlook {
+    height: 3.8%;    
+    margin-top: 5px;
+    color: white;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    background-color: #C00;
+}
+
+.test-list {
+    margin-top: 2.5%;
+    margin-left: 1%;
+}
+
+.calendar-test {
+    margin-left: 0.5%;
+    margin-right: 2%;
+    
+}
+.manage-link {    
+    padding-top: 6.8%;
+    margin-left: 1px;
+}
+
+p {
+    margin-left: -2.5%;
+    margin-top: 1%;    
+}
+/* end-right */
+
+/* end- center layout */
+
+/* CSS for footer layout */
+.footer {    
+    padding-top: 0.4%;
+    height: 21%;            
+}
+
+.footer-content {    
+    background-color: #F4F4F4;
+}
+.inside-footer{        
+    width:72%;
+    padding-top: 0%;
+    padding-left: 9.2%;
+}
+.inside-footer div{    
+    padding-left: 1.6%;    
+}
+div.help {
+    padding-top: 2.1%;
+}
+.information {
+    padding-bottom: 2%;
+}
+.inside-footer div a{
+    padding-left: 1%;
+    color: #2D66CF;
+    font-family: arial, 'Lucida Grande', verdana, helvetica, sans-serif !important;
+    font-weight: lighter;
+    font-size: 14px;    
+}
+
+#faq{    
+    padding-left:2.2%;
+}
+.legal{    
+    padding-top: 0.6%;
+    padding-bottom: 0.5%;    
+}
+
+#privacy {
+    padding-left:1.1%;
+}
+#about{
+    padding-left:2.2%;
+}
+
+.copyrights{    
+    color: #8E8E8E;
+    padding-top: 1%;
+    padding-left: 11%;
+}
+
+strong {
+    color: black;
+}
+
+.footer-links {    
+    padding-left: 0.11%;
+}
+/* end - footer */
+
+.right-align {
+    float: right;
+}
+
+#test-text {
+    text-align: top:
+}
+
+a {     
+    text-decoration: none;    
+} 
+
+a:hover {
+    color: #2D66CF;
+    text-decoration: underline;    
+}
+
+.bold-link {    
+    color: #2D66CF;
+    font-style:inherite;
+    font-weight:bold;  
+    font-size: 110%;
+    font-family: arial, 'Lucida Grande';
+}
+
+.left-align {
+    float:left;
+}
+
+
+
+#feedback_link {
+    background-image: url('feedback-1.png');
+    height: 94px;
+    overflow: hidden;
+    position: fixed;
+    width: 26px;
+    z-index: 99999;
+}
+
+#feedback_link.left-align {
+    background-image: url('feedback-1.png');    
+    left: 0%;
+    top: 25%;    
+}

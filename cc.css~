@@ -1,0 +1,169 @@
+.center {    
+    height: 72%;    
+}
+
+.header {      
+    height: 9.3%;
+}
+.top-menu{
+    width: 49%;
+    padding-top: 1.5%;
+    text-align: right;    
+}
+.top-menu a {
+    
+    }
+.container {
+    position: relative;
+}
+
+#calender-page {
+    width: 95%;
+}
+#content {
+    width: 71.5%;
+    overflow: hidden;    
+}
+
+#content img {
+    width:100%;
+    height: 100%;
+    }
+
+.footer {    
+    padding-top: 1.3%;
+    height: 25%;            
+}
+
+.right-align {
+    float: right;
+}
+
+
+.another-test {   
+    color: white;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    background-color: #C90016;
+}
+
+.test {
+    color: white;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    background-color:  #FCC200;
+}
+.footer-content {    
+    background-color: #F8F8FF;
+}
+a {     
+    text-decoration: none;    
+} 
+.bold-link {    
+    color: #2D66CF;
+    font-style:inherite;
+    font-weight:bold;  
+    font-size: 110%;
+    font-family: arial, 'Lucida Grande';
+}
+
+.left-title{    
+    padding-top: 10%;
+    text-align: center;    
+}
+.manage { 
+    padding-left: 14%;
+    padding-top:10%;    
+}
+
+.manage-link {    
+    padding-top: 5%;
+}
+.inside-footer{    
+    width:71%;
+    padding-top: 0%;
+    padding-left: 10%;
+}
+.inside-footer div{
+    padding-top: 0.7%;
+    padding-left: 2%;
+}
+div.help {
+    padding-top: 2%;
+    }
+.information {
+    padding-bottom: 3%;
+    }
+.inside-footer div a{
+    font-size: 112%;
+}
+
+.help a{    
+    padding-left:2.2%;
+}
+.legal a{    
+    padding-left:1.3%;
+}
+.information a{
+    padding-left:2.8%;
+}
+.calender {
+   /* background-image:url('calender-1.png');
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em; */
+    width:100%;    
+    height: 30.7%;        
+    overflow:hidden;
+}
+
+.calender img {
+    width: 100%;
+    height: 100%;
+    }
+.copyrights{    
+    padding-top: 1%;
+    padding-left: 13%;
+}
+
+.quick-event ul{    
+    list-style-type:none;
+    }
+.quick-event li {
+    padding-right: 6px;
+    padding-top: 6px;
+    }
+.quick-event{    
+    padding-left: 0%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    overflow: hidden;
+}
+.event {      
+    width:153%;
+    height: 4.4%;
+    background-color:  #DCDCDC;  
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+}
+.event img{
+    width:60%;
+    height:60%;
+    padding: 20%;
+}
+
+
+.list {
+    padding-right: 0.8%;
+    }
+
+.templates {
+    width: 9.8%;
+    }
+.calender_details {
+    width: 17.2%;
+    }
+
+.feedback-link {    
+    z-index: ;
+    }
+

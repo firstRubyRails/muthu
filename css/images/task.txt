@@ -1,0 +1,11 @@
+/* Developing calender page for CalenderCruncher Application */
+
+Tasks:
+	> Creating HTML structure
+	     * Create Header block      - 20minutes
+	     * Create Footer block      - 20minutes	      
+	     * Create Sidebar 		- 30minutes
+	     * Create content		- 30minutes
+	> Apply style to HTML structure 
+	     * Apply Style to each block - 40 minutes
+	     * Making layout as fluid  	 - 20 minutes

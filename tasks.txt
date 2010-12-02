@@ -1,0 +1,17 @@
+/* Designing Simple Calculator in Javascript Using OOPs concept */
+
+Tasks:
+	> Create HTML Structure
+	     * Create a form				- 15minutes
+	     * Apply CSS Style				- 15minutes
+	> Javascript Code for Validating a form
+	     * Create contstuctor function		- 30minutes 
+	     * Adding event handlers	     		- 20minutes
+	     * Validation 
+	           * Add class method for validation	- 80minutes
+	           * Validating both oprands 		- 20minutes
+		   * Validating operator		- 20minutes
+	     * Calculate result  	       		- 30minutes
+	     
+	     
+	     ETA: Today 7pm..
