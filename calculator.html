@@ -10,9 +10,9 @@
   <body>
     <div class="container">
       <div class="header">	
-	<h1 class="prepend-7">Simple Calculator</h1>
+	<h1 class="prepend-6">Simple Calculator</h1>
       </div>
-      <div class="prepend-7 calculator">
+      <div class="prepend-6 calculator">
 	<div>
 	<label>Operand 1 : </label>
 	<input type="text" value="0" id="operand1"  onblur="validateOperand(this.id)">
@@ -20,8 +20,8 @@
 	</div>
 	<div>
 	<label>Operator : </label>
-	<input type="text" value="+" id="operator">
-	<span id="operator-help"></span>
+	<input type="text" value="-" id="operator" onblur="validateOperator(this.id)">
+	<span id="operator-helptext"></span>
 	</div>
 	<div>
 	<label>Operand 2 : </label>
